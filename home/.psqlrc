@@ -1,0 +1,21 @@
+\set ON_ERROR_ROLLBACK interactive
+\set COMP_KEYWORD_CASE upper
+
+\set VERBOSITY verbose
+\x auto
+\timing
+-- Prompt and display settings
+\set PROMPT2 '%R%# '
+\pset null '[null]'
+
+-- Use sensible pager
+\pset pager always
+\setenv PAGER 'less -iMFXSx4R'
+
+-- It's 21st century, let's use unicode for borders
+\pset linestyle unicode
+
+-- Stop hiding confirmation messages
+\unset QUIET
+
+-- vim: set ft=sql:

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -eu
+
+repository_dir=$(
+  unset CDPATH
+  cd -- "$(dirname -- "$0")"
+  pwd -P
+)
+target_dir=${DOTFILES_TARGET:-${HOME:?HOME is not set}}
+
+if ! command -v stow >/dev/null 2>&1; then
+  echo "GNU Stow is required. On macOS, install it with: brew install stow" >&2
+  exit 1
+fi
+
+if [ ! -d "$target_dir" ]; then
+  echo "Dotfiles target is not a directory: $target_dir" >&2
+  exit 1
+fi
+
+exec stow \
+  --dir="$repository_dir" \
+  --target="$target_dir" \
+  --restow \
+  --no-folding \
+  --verbose=1 \
+  home

@@ -58,3 +58,8 @@ additional safeguard.
 The Neovim configuration is based on
 [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim), distributed under
 the MIT license.
+
+## Ghostty
+
+Stow installs the Ghostty configuration under `~/.config/ghostty`. Reload it
+from Ghostty with `Cmd+Shift+,` after pulling changes.

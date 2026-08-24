@@ -1,0 +1,23 @@
+window-width = 180
+window-height = 45
+window-padding-x = 10
+window-padding-y = 2
+window-padding-balance = true
+
+# Readability and reduced visual distraction
+font-size = 15
+adjust-cell-height = 8%
+minimum-contrast = 3
+cursor-style-blink = false
+mouse-hide-while-typing = true
+
+# Always reserve Shift+drag for native Ghostty text selection, even when
+# tmux or another terminal application has mouse reporting enabled.
+mouse-shift-capture = never
+
+copy-on-select = clipboard
+macos-option-as-alt = true
+
+# Useful for direct SSH connections
+shell-integration = zsh
+shell-integration-features = cursor,title,ssh-env,ssh-terminfo,path

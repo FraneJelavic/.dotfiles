@@ -6,6 +6,7 @@ set ignorecase
 set smartcase
 set wildmenu
 set wildmode=list:longest,full
+syntax on
 syntax enable
 set tabstop=4
 set softtabstop=4
